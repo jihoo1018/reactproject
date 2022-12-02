@@ -14,15 +14,14 @@ const Home = () =>{
         <tbody>
         <tr style={{ width: "20%",height: "80%",  border: "1px solid black"}}>
         <td style={{ width: "100%", border: "1px solid black"}}>
-        <Routes>    
-        <Route path="/home" element={<Home/>}></Route>
+        <Routes>
         <Route path="/counter" element={<Counter/>}></Route>
         <Route path="/todos" element={<TodoInput/>}></Route>   
         </Routes>        
         </td>
         </tr>
         <tr style={{ width: "100%", height: "20%", border: "1px solid black"}}>
-        <Footer></Footer>
+        <Footer/>
         </tr>
         </tbody>  
        
