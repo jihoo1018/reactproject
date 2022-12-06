@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom"
-import {Navigation, Counter, Footer} from "../components"
-import {Schedule} from "../containers"
+import {Counter,Navigation, Footer} from "common"
+import {Schedule} from "todos"
 const Home = () => {
     return (<>
     <table style={{ width: "1200px", height: "550px", margin: "0 auto", border: "1px solid black"}}>
