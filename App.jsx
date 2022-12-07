@@ -1,4 +1,4 @@
-import {Home} from "common"
+import {Home} from "cmm"
 
 const App = () => {
   return (<>
