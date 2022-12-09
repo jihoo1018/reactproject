@@ -3,6 +3,7 @@ import {Navigation, Counter, Footer} from "cmm"
 import {Schedule} from "cop"
 import {LoginForm} from "uat"
 import dog from '../../images/dog.jpg'
+import fashion from '../../images/fashion.png'
 const Home = () => {
     return (<>
     <table style={{ width: "1200px", height: "550px", margin: "0 auto", border: "1px solid black"}}>
@@ -25,7 +26,7 @@ const Home = () => {
         </tr>
         <tr>
             <td>
-                <img src={dog}/>
+                <img src={fashion}/>
             </td>
         </tr>
         <tr style={{ width: "100%", height: "20%", border: "1px solid black"}}>
