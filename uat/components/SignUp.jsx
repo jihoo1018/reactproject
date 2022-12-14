@@ -1,6 +1,6 @@
 import '../styles/SignUp.css'
 import { useState } from "react"
-import { userLogin } from '../api'
+import { blogLogin } from '../api'
 
 const SignUp = () => {
     const [inputs, setInputs] = useState({})
@@ -15,7 +15,7 @@ const SignUp = () => {
         e.preventDefault()
         const request = {email,nickname, password}
         alert(`사용자 이름: ${JSON.stringify(request)}`)
-        userLogin(request)
+        blogLogin(request)
         .then((res)=>{
             console.log(`Response is ${res}`)
             localStorage.setItem('token',JSON.stringify(res.config.data))

@@ -1,6 +1,6 @@
 import '../styles/Login.css'
 import { useState } from "react"
-import { userLogin } from '../api'
+import { blogLogin } from '../api'
 const Login = () => {
     const [inputs, setInputs] = useState({})
     const {email, password} = inputs;
@@ -14,14 +14,15 @@ const Login = () => {
         e.preventDefault()
         const request = {email, password}
         alert(`사용자 이름: ${JSON.stringify(request)}`)
-        userLogin(request)
+        blogLogin(request)
         .then((res)=>{
+            alert(`Response is ${res.config.data}`)
             console.log(`Response is ${res.config.data}`)
-            localStorage.setItem('token',JSON.stringify(res.config.data))
+            localStorage.setItem('token', JSON.stringify(res.config.data))
         })
         .catch((err)=>{
             console.log(err)
-            alert("아이디와 비밀번호를 다시 입력해주세요")
+            alert('아이디와 비밀번호를 다시')
         })
 
     }
