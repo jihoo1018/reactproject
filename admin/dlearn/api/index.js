@@ -1,6 +1,6 @@
-import {server, dlearn} from 'context'
+import {server, dlearn,webcrawler} from 'context'
 const dlearnService = {
-    iris, getFashion, postFashion ,postNumber
+    iris, getFashion, postFashion ,postNumber, navermovie
 }
 function handleResponse(response){ 
     return response.text()
@@ -17,6 +17,14 @@ function handleResponse(response){
             return data
         })
     }
+async function navermovie(){
+    fetch(`${server}${webcrawler}naver-movie`)
+    .then(handleResponse)
+    .then(data => {
+        alert('결과: '+JSON.stringify(data))
+    })
+} 
+
 async function iris(id){
     const requestOption = {
         method: "POST",
@@ -69,6 +77,7 @@ async function postNumber(id){
     .catch((error) => {
         alert('error :::: '+error);
     });
+
 }
 
 export default dlearnService

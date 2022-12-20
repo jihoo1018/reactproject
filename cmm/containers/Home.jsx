@@ -6,6 +6,7 @@ import image from '../../images/fashion.png'
 import {Iris2} from "shop"
 import {Fashion} from "admin"
 import {MnNumber} from "admin"
+import { NaverMovie } from "webcrawler"
 const Home = () => {
     const imageSize = {width: 700, height: 500}
     return (<>
@@ -27,6 +28,7 @@ const Home = () => {
                 <Route path="/iris" element={<Iris2/>}></Route>
                 <Route path="/fashion" element={<Fashion/>}></Route>
                 <Route path="/mnnumber" element={<MnNumber/>}></Route>
+                <Route path="/navermovie" element={<NaverMovie/>}></Route>
 
             </Routes>
             </td>
