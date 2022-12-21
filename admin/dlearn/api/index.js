@@ -17,13 +17,16 @@ function handleResponse(response){
             return data
         })
     }
+
 async function navermovie(){
-    fetch(`${server}${webcrawler}naver-movie`)
+    const res = await fetch(`${server}${webcrawler}naver-movie`)
     .then(handleResponse)
-    .then(data => {
-        alert('결과: '+JSON.stringify(data))
-    })
-} 
+    .then(data => JSON.stringify(data))
+    .catch((error) => {
+        alert('error :::: '+error);
+    });
+    return Promise.resolve(res);
+}
 
 async function iris(id){
     const requestOption = {

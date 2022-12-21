@@ -2,9 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import RestoreIcon from '@mui/icons-material/Restore';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { Link } from "react-router-dom"
 
 const Navigation2 = () => {
@@ -13,21 +11,22 @@ const Navigation2 = () => {
   return (
     <Box sx={{ width: 500 }}>
       <BottomNavigation
+        showLabels
         value={value}
         onChange={(event, newValue) => {
           setValue(newValue);
         }}
       >
-        <Link to="/home" style={{width:50, margin:10}}>홈</Link>
-        <Link to="/counter" style={{width:50, margin:10}}>카운터</Link>
-        <Link to="/todos" style={{width:50, margin:10}}>할일</Link>
-        <Link to="/signup" style={{width:70, margin:10}}>회원가입</Link>
-        <Link to="/login" style={{width:50, margin:10}}>로그인</Link>
-        <Link to="/stroke" style={{width:50, margin:10}}>뇌졸증</Link>
-        <Link to="/iris" style={{width:50, margin:10}}>붓꽃</Link>
-        <Link to="/fashion" style={{width:50, margin:10}}>패션</Link>
-        <Link to="/mnnumber" style={{width:50, margin:10}}>mn숫자</Link>
-        <Link to="/navermovie" style={{width:50, margin:10}}>영화 크롤러</Link>
+        <BottomNavigationAction label="Home" icon={<FavoriteIcon/>} component={Link} to="/home"/>
+        <BottomNavigationAction label="Counter" icon={<FavoriteIcon/>} component={Link} to="/counter"/>
+        <BottomNavigationAction label="Todo" icon={<FavoriteIcon/>} component={Link} to="/todos"/>
+        <BottomNavigationAction label="SignUp" icon={<FavoriteIcon/>} component={Link} to="/signup"/>
+        <BottomNavigationAction label="Login" icon={<FavoriteIcon/>} component={Link} to="/login"/>
+        <BottomNavigationAction label="Stroke" icon={<FavoriteIcon/>} component={Link} to="/stroke"/>
+        <BottomNavigationAction label="Iris" icon={<FavoriteIcon/>} component={Link} to="/iris"/>
+        <BottomNavigationAction label="Fashion" icon={<FavoriteIcon/>} component={Link} to="/fashion"/>
+        <BottomNavigationAction label="Number" icon={<FavoriteIcon/>} component={Link} to="/mnnumber"/>
+        <BottomNavigationAction label="NaverMovie" icon={<FavoriteIcon/>} component={Link} to="/navermovie"/>
       </BottomNavigation>
     </Box>
   );

@@ -33,8 +33,10 @@ const SignUp = () => {
         NICKNAME: <input type="text" name="nickname" onChange={onChange} /><br/>
         PASSWORD: <input type="text" name="password" onChange={onChange} /><br/>
         <button onClick={onClick}> 회원가입 </button>
-
-    
+        <h2>회원가입</h2>
+        <button onClick={onClick}>사용자등록</button>
+        <p>버튼을 클릭하시면, 더미 사용자 100명이 출력됩니다.</p>
+        
     </>
 )
     }
