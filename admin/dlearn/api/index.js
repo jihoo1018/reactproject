@@ -1,6 +1,6 @@
-import {server, dlearn,webcrawler} from 'context'
+import {server, dlearn,webcrawler,nlp} from 'context'
 const dlearnService = {
-    iris, getFashion, postFashion ,postNumber, navermovie
+    iris, getFashion, postFashion ,postNumber, navermovie ,konlp
 }
 function handleResponse(response){ 
     return response.text()
@@ -17,6 +17,16 @@ function handleResponse(response){
             return data
         })
     }
+
+async function konlp(){
+    const res = await fetch(`${server}${nlp}ko-nlp`)
+    .then(handleResponse)
+    .then(data => JSON.stringify(data))
+    .catch((error) => {
+        alert('error :::: '+error);
+    });
+    return Promise.resolve(res);
+}    
 
 async function navermovie(){
     const res = await fetch(`${server}${webcrawler}naver-movie`)

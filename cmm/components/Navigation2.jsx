@@ -27,6 +27,7 @@ const Navigation2 = () => {
         <BottomNavigationAction label="Fashion" icon={<FavoriteIcon/>} component={Link} to="/fashion"/>
         <BottomNavigationAction label="Number" icon={<FavoriteIcon/>} component={Link} to="/mnnumber"/>
         <BottomNavigationAction label="NaverMovie" icon={<FavoriteIcon/>} component={Link} to="/navermovie"/>
+        <BottomNavigationAction label="Konlp" icon={<FavoriteIcon/>} component={Link} to="/konlp"/>
       </BottomNavigation>
     </Box>
   );

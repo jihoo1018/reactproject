@@ -7,6 +7,7 @@ import {Iris2} from "shop"
 import {Fashion} from "admin"
 import {MnNumber} from "admin"
 import { NaverMovie } from "webcrawler"
+import {Konlp} from "admin/nlp"
 const Home = () => {
     const imageSize = {width: 300, height: 300}
     return (<>
@@ -30,6 +31,7 @@ const Home = () => {
                 <Route path="/fashion" element={<Fashion/>}></Route>
                 <Route path="/mnnumber" element={<MnNumber/>}></Route>
                 <Route path="/navermovie" element={<NaverMovie/>}></Route>
+                <Route path="/konlp" element={<Konlp/>}></Route>
 
             </Routes>
             </td>
