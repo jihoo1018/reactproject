@@ -1,7 +1,7 @@
-import {server, dlearn,webcrawler,nlp, moviere} from 'context'
+import {server, dlearn,webcrawler,nlp, moviere, loginre} from 'context'
 
 const dlearnService = {
-    iris, getFashion, postFashion ,postNumber, navermovie ,konlp, moviereview
+    iris, getFashion, postFashion ,postNumber, navermovie ,konlp, moviereview, loginform
 }
 
 
@@ -20,6 +20,23 @@ function handleResponse(response){
             return data
         })
     }
+
+
+async function loginform(id){
+    const requestOption = {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(id)
+    }
+    fetch(`${server}${loginre}login-form`, requestOption)
+    .then(handleResponse)
+    .then(data => {
+        alert(JSON.stringify(data))
+    })
+    .catch((error) => {
+        alert('error :::: '+error);
+    });
+}
 
 async function moviereview(review){
     const requestOption = {

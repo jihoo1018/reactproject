@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import {Navigation2, Counter, Footer} from "cmm"
 import {Schedule} from "cop"
-import {LoginForm, SignUp} from "uat"
+import {Login, SignUp,ListForm} from "uat"
 import image from '../../images/fashion.png'
 import {Iris2} from "shop"
 import {Fashion} from "admin"
@@ -25,7 +25,7 @@ const Home = () => {
             <Routes>
                 <Route path="/counter" element={<Counter/>}></Route>
                 <Route path="/todos" element={<Schedule/>}></Route>
-                <Route path="/login" element={<LoginForm/>}></Route>
+                <Route path="/login-form" element={<Login/>}></Route>
                 <Route path ="/SignUp" element={<SignUp/>}></Route>
                 <Route path="/iris" element={<Iris2/>}></Route>
                 <Route path="/fashion" element={<Fashion/>}></Route>
@@ -33,6 +33,7 @@ const Home = () => {
                 <Route path="/navermovie" element={<NaverMovie/>}></Route>
                 <Route path="/konlp" element={<Konlp/>}></Route>
                 <Route path="/moviereview" element={<MovieReview/>}></Route>
+                <Route path="/userlist" element={<ListForm/>}></Route>
             </Routes>
             </td>
         </tr>

@@ -1,9 +1,12 @@
 import '../styles/Login.css'
 import { useState } from "react"
-import { blogLogin } from '../api'
+import {userLogin} from "../api"
+import {useNavigate} from "react-router-dom"
+
 const Login = () => {
     const [inputs, setInputs] = useState({})
     const {email, password} = inputs;
+    const navigate = useNavigate()
 
     const onChange = e => {
         e.preventDefault()
@@ -14,11 +17,11 @@ const Login = () => {
         e.preventDefault()
         const request = {email, password}
         alert(`사용자 이름: ${JSON.stringify(request)}`)
-        blogLogin(request)
+        userLogin(request)
         .then((res)=>{
-            alert(`Response is ${res.config.data}`)
-            console.log(`Response is ${res.config.data}`)
-            localStorage.setItem('token', JSON.stringify(res.config.data))
+            localStorage.setItem("LOGINUSER", JSON.stringify(res.data))
+            alert(`로컬 스토리지에 저장된 정보 : ${localStorage.getItem("LOGINUSER")}`)
+            navigate("/home")
         })
         .catch((err)=>{
             console.log(err)
